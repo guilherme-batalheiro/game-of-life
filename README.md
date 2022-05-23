@@ -6,3 +6,4 @@ Simple Conway's Game of Life
 - C for continue
 - Del for delete all cells
 - Left-Clk fro place a cell
+- K kill cell
