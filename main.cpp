@@ -37,8 +37,8 @@ void drawCellMap(sf::RenderWindow *window, std::vector<std::vector<myObjs::Cell>
 }
 
 void placeCellInMap(sf::Vector2i mousePos, std::vector<std::vector<myObjs::Cell>> *cellMap) {
-    if (mousePos.x >= 0 && mousePos.x <= WINDOW_WIDTH && mousePos.y >= 0 &&
-        mousePos.y <= WINDOW_HEIGHT) {
+    if (mousePos.x >= 0 && mousePos.x < WINDOW_WIDTH && mousePos.y >= 0 &&
+        mousePos.y < WINDOW_HEIGHT) {
         int cellXPos = (int)mousePos.x / CELL_SIZE;
         int cellYPos = (int)mousePos.y / CELL_SIZE;
         (*cellMap)[cellXPos][cellYPos].revive();
@@ -46,8 +46,8 @@ void placeCellInMap(sf::Vector2i mousePos, std::vector<std::vector<myObjs::Cell>
 }
 
 void killCellInMap(sf::Vector2i mousePos, std::vector<std::vector<myObjs::Cell>> *cellMap) {
-    if (mousePos.x >= 0 && mousePos.x <= WINDOW_WIDTH && mousePos.y >= 0 &&
-        mousePos.y <= WINDOW_HEIGHT) {
+    if (mousePos.x >= 0 && mousePos.x < WINDOW_WIDTH && mousePos.y >= 0 &&
+        mousePos.y < WINDOW_HEIGHT) {
         int cellXPos = (int)mousePos.x / CELL_SIZE;
         int cellYPos = (int)mousePos.y / CELL_SIZE;
         (*cellMap)[cellXPos][cellYPos].kill();
